@@ -1,22 +1,104 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="fr">
   <head>
-    <title>CSS/HTML Workshop with Drivy</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="WS2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Drivy - location de voiture</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
   </head>
   <body>
-    <div id="car">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">S'inscrire</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Se connecter</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">FAQ</a>
+            </nav>
+          </div>
+          <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="images/android-logo.png">
+          </span>
+        </div>
+      </div>
+
+      <div class="android-drawer mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <img class="android-logo-image" src="images/android-logo-white.png">
+        </span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="https://www.drivy.com/">Mon compte</a>
+          <a class="mdl-navigation__link" href="https://www.drivy.com/">Historique</a>
+          <div class="android-drawer-separator"></div>
+          <span class="mdl-navigation__link" href="blog.drivy.com/">Blog</span>
+        </nav>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="android-be-together-section mdl-typography--text-center">
+          <div class="logo-font android-slogan">Louez des voitures.</div>
+          <div class="logo-font android-sub-slogan">louer c'est cool.</div>
+        </div>
+        <div class="android-wear-section">
+          <div class="android-wear-band">
+            <div class="android-wear-band-text">
+              <div class="mdl-typography--display-2 mdl-typography--font-thin">Location</div>
+
+              <form action="#">
+
+            <div id="car">
       <input class="model" type="text" placeholder="Car model"/>
       <input class="price-by-day" type="number" placeholder="Price by day"/>
       <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
+          </div>
     <div id="rental">
       <input class="begin" type="date" placeholder="Rental begin date"/>
       <input class="end" type="date" placeholder="Rental end date"/>
       <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+
+      <input class="option" type="checkbox" placeholder="Deductible option"/> Deductible option
     </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+    <button id="compute" class="mdl-button mdl-color-text--white mdl-js-button mdl-js-ripple-effect">
+  Compute
+</button>
+
+
+        <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
@@ -26,8 +108,136 @@
         </div>
       {{/actors}}
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    
+  </form>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="android-customized-section">
+          <div class="android-customized-section-text">
+            <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Des voitures de particuliers à louer partout en France</div>
+            <p class="mdl-typography--font-light">
+              Inscrivez gratuitement votre voiture, puis louez-la quand vous voulez.
+Soyez tranquille : Allianz assure toutes les locations !
+              <br>
+              <a href="" class="android-link mdl-typography--font-light">Louer ma voiture</a>
+            </p>
+          </div>
+          <div class="android-customized-section-image"></div>
+        </div>
+        <div class="android-more-section">
+          <div class="android-section-title mdl-typography--display-1-color-contrast">Blog</div>
+          <div class="android-card-container mdl-grid">
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-from-1.png">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Rejoindre les stations de ski avec Drivy</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Glisser le long des flancs des montagnes, savourer un verre de vin chaud entre amis dans un joli petit chalet en bois en fin de journée, déguster une bonne raclette en famille… Les vacances au ski ont du bon ! ...</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/12/stations-ski-drivy/">
+                   Lire l'article
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-from-4.png">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Top 5 des véhicules loués entre particuliers les plus populaires</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">A l’occasion de la nouvelle année, nous vous proposons de revenir sur les types et modèles de voiture les plus populaires sur la plateforme de 12 derniers mois et de comparer ces chiffres avec ceux de nos voisins européens. Et vous, votre voiture figure t-elle dans le classement ? Partagez l’infographie ...</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/09/top-5-vehicules-plus-populaires-entre-particuliers/">
+                   Lire l'article
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-from-2.png">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Les meilleures évaluations 2016</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Et une année de plus ! Joyeux anniversaire Drivy ! A cette occasion nous avons déniché les meilleurs commentaires laissés sur la plateforme durant l’année 2016. Les plus sympas Côté locataires : Côté propriétaires : “Sans blague, Sylvie est une personnalité pas banale : je la trouve à chaque fois, près ...</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/05/meilleures-evaluations-2016/">
+                   Lire l'article
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="images/more-from-3.png">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Calendrier des vacances et des week-ends prolongés de l’année 2017</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">L’année 2017 a certainement commencé sur les chapeaux de roues et vous commencez à songer à vos prochaines escapades en dehors de la ville. Bonne nouvelle, 2017 sera plus généreuse en week-ends prolongés que ce que n’a été l’année 2016 et plusieurs ponts se sont glissés dans nos calendriers...</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/02/calendrier-vacances-week-ends-prolonges-de-lannee-2017/">
+                   Lire l'article
+                   <i class="material-icons">chevron_right</i>
+                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="android-footer mdl-mega-footer">
+          <div class="mdl-mega-footer--top-section">
+            <div class="mdl-mega-footer--right-section">
+              <a class="mdl-typography--font-light" href="#top">
+                Back to Top
+                <i class="material-icons">expand_less</i>
+              </a>
+            </div>
+          </div>
+
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light">copyright</p>
+          </div>
+
+          <div class="mdl-mega-footer--bottom-section">
+            <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+              What's next ?
+              <i class="material-icons">arrow_drop_up</i>
+            </a>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="version-dropdown">
+              <li class="mdl-menu__item">3rd Workshop</li>
+              <li class="mdl-menu__item">4th Workshop</li>
+              <li class="mdl-menu__item">5th WS</li>
+              <li class="mdl-menu__item">WS</li>
+            </ul>
+          </div>
+
+        </footer>
+      </div>
+    </div>  
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
+    <script src="style.css"></script>
   </body>
 </html>
