@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-/* Disable ugly boxes around images in IE10 */
+/* Disable boxes around images*/
 a img{
   border: 0px;
 }
@@ -13,7 +13,6 @@ a img{
   background-color: #6ab344;
   color: white;
 }
-
 
 
 .android-fab {
@@ -53,7 +52,7 @@ a img{
   }
 
   .android-navigation-container {
-    /* Simple hack to make the overflow happen to the left instead... */
+
     direction: rtl;
     -webkit-order: 1;
         -ms-flex-order: 1;
@@ -64,7 +63,7 @@ a img{
   }
 
   .android-navigation {
-    /* ... and now make sure the content is actually LTR */
+    /* to make sure the content is actually LTR */
     direction: ltr;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
@@ -211,47 +210,6 @@ a img{
   }
 
 
-.android-phone {
-  display: inline-block;
-  width: 64px;
-  margin-right: 48px;
-}
-
-  .android-phone .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-
-.android-tablet {
-  display: inline-block;
-  width: 110px;
-  margin-right: 64px;
-}
-
-  .android-tablet .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-  .android-tablet .android-link {
-    display: block;
-    z-index: 2;
-  }
-
-
-.android-tv {
-  display: inline-block;
-  width: 300px;
-  margin-right: 80px;
-}
-
-  .android-tv .android-screen-image {
-    width: 100%;
-    z-index: 1;
-  }
-
-
 .android-auto {
   display: inline-block;
   width: 300px;
@@ -333,7 +291,7 @@ a img{
   }
 
 .android-customized-section-image {
-  background: url('images/devices.jpg') center top no-repeat;
+  background: url('images/cars.jpg') center top no-repeat;
   background-size: cover;
   height: 400px;
 }
@@ -388,32 +346,19 @@ a img{
     font-size: 16px;
   }
 
+
 .android-footer {
   background-color: #fafafa;
   position: relative;
 }
-
   .android-footer a:hover {
-    color: #8bc34a;
-  }
-
-  .android-footer .mdl-mega-footer--top-section::after {
-    border-bottom: none;
-  }
-
-  .android-footer .mdl-mega-footer--middle-section::after {
-    border-bottom: none;
-  }
-
-  .android-footer .mdl-mega-footer--bottom-section {
-    position: relative;
+    color: #0f213c;
   }
 
   .android-footer .mdl-mega-footer--bottom-section a {
+    position:relative;
     margin-right: 2em;
   }
-
-
 
 .android-link-menu:hover {
   cursor: pointer;
