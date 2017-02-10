@@ -15,15 +15,15 @@
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="drivy-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row">
-          <span class="android-title mdl-layout-title">
-            <img class="android-logo-image" src="images/android-logo.png">
+          <span class="drivy-title mdl-layout-title">
+            <img class="drivy-logo-image" src="images/drivy-logo.png">
           </span>
           <!-- banner -->
 
-          <div class="android-header-spacer mdl-layout-spacer"></div>
-          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <div class="drivy-header-spacer mdl-layout-spacer"></div>
+          <div class="drivy-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
               <i class="material-icons">search</i>
             </label>
@@ -33,8 +33,8 @@
           </div>
 
           <!-- Navigation -->
-          <div class="android-navigation-container">
-            <nav class="android-navigation mdl-navigation">
+          <div class="drivy-navigation-container">
+            <nav class="drivy-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">S'inscrire</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Se connecter</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">FAQ</a>
@@ -44,27 +44,27 @@
         </div>
       </div>
 
-      <div class="android-drawer mdl-layout__drawer">
+      <div class="drivy-drawer mdl-layout__drawer">
         <span class="mdl-layout-title">
-          <img class="android-logo-image" src="images/android-logo-white.png">
+          <img class="drivy-logo-image" src="images/drivy-logo-white.png">
         </span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="https://www.drivy.com/">Mon compte</a>
           <a class="mdl-navigation__link" href="https://www.drivy.com/">Historique</a>
-          <div class="android-drawer-separator"></div>
+          <div class="drivy-drawer-separator"></div>
           <span class="mdl-navigation__link" href="blog.drivy.com/">Blog</span>
         </nav>
       </div>
 
-      <div class="android-content mdl-layout__content">
+      <div class="drivy-content mdl-layout__content">
         <a name="top"></a>
-        <div class="android-be-together-section mdl-typography--text-center">
-          <div class="logo-font android-slogan">Louez des voitures.</div>
-          <div class="logo-font android-sub-slogan">louer c'est cool.</div>
+        <div class="drivy-be-together-section mdl-typography--text-center">
+          <div class="logo-font drivy-slogan">Louez des voitures.</div>
+          <div class="logo-font drivy-sub-slogan">Moins cher, plus proche, plus pratique.</div>
         </div>
-        <div class="android-wear-section">
-          <div class="android-wear-band">
-            <div class="android-wear-band-text">
+        <div class="drivy-wear-section">
+          <div class="drivy-wear-band">
+            <div class="drivy-wear-band-text">
               <div class="mdl-typography--display-2 mdl-typography--font-thin">Location</div>
 
               <form action="#">
@@ -86,38 +86,54 @@
     </button>
 
 
-        <div id="actors"></div>
+  
+        <div id="actors" ></div>
     <script id="template" type="x-tmpl-mustache">
+
+
       {{#actors}}
         <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
+          <span class="nowrap">{{who}}</span>
+          <span class="nowrap">{{type}}</span>
+          <span class="nowrap">{{amount}}</span>
         </div>
       {{/actors}}
+
     </script>
-    
+
+        <script id="template" type="x-tmpl-mustache">
+
+
+      {{#cars}}
+        <div class="car">
+          <span class="nowrap">{{model}}</span>
+        </div>
+      {{/cars}}
+
+    </script>
+
+
   </form>
 
             </div>
           </div>
         </div>
 
-        <div class="android-customized-section">
-          <div class="android-customized-section-text">
+        <div class="drivy-customized-section">
+          <div class="drivy-customized-section-text">
             <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Des voitures de particuliers à louer partout en France</div>
             <p class="mdl-typography--font-light">
               Inscrivez gratuitement votre voiture, puis louez-la quand vous voulez.
 Soyez tranquille : Allianz assure toutes les locations !
               <br>
-              <a href="" class="android-link mdl-typography--font-light">Louer ma voiture</a>
+              <a href="" class="drivy-link mdl-typography--font-light">Louer ma voiture</a>
             </p>
           </div>
-          <div class="android-customized-section-image"></div>
+          <div class="drivy-customized-section-image"></div>
         </div>
-        <div class="android-more-section">
-          <div class="android-section-title mdl-typography--display-1-color-contrast">Blog</div>
-          <div class="android-card-container mdl-grid">
+        <div class="drivy-more-section">
+          <div class="drivy-section-title mdl-typography--display-1-color-contrast">Blog</div>
+          <div class="drivy-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
                 <img src="images/more-from-1.png">
@@ -129,7 +145,7 @@ Soyez tranquille : Allianz assure toutes les locations !
                 <span class="mdl-typography--font-light mdl-typography--subhead">Glisser le long des flancs des montagnes, savourer un verre de vin chaud entre amis dans un joli petit chalet en bois en fin de journée, déguster une bonne raclette en famille… Les vacances au ski ont du bon ! ...</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/12/stations-ski-drivy/">
+                 <a class="drivy-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/12/stations-ski-drivy/">
                    Lire l'article
                    <i class="material-icons">chevron_right</i>
                  </a>
@@ -147,7 +163,7 @@ Soyez tranquille : Allianz assure toutes les locations !
                 <span class="mdl-typography--font-light mdl-typography--subhead">A l’occasion de la nouvelle année, nous vous proposons de revenir sur les types et modèles de voiture les plus populaires sur la plateforme de 12 derniers mois et de comparer ces chiffres avec ceux de nos voisins européens. Et vous, votre voiture figure t-elle dans le classement ? Partagez l’infographie ...</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/09/top-5-vehicules-plus-populaires-entre-particuliers/">
+                 <a class="drivy-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/09/top-5-vehicules-plus-populaires-entre-particuliers/">
                    Lire l'article
                    <i class="material-icons">chevron_right</i>
                  </a>
@@ -165,7 +181,7 @@ Soyez tranquille : Allianz assure toutes les locations !
                 <span class="mdl-typography--font-light mdl-typography--subhead">Et une année de plus ! Joyeux anniversaire Drivy ! A cette occasion nous avons déniché les meilleurs commentaires laissés sur la plateforme durant l’année 2016. Les plus sympas Côté locataires : Côté propriétaires : “Sans blague, Sylvie est une personnalité pas banale : je la trouve à chaque fois, près ...</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/05/meilleures-evaluations-2016/">
+                 <a class="drivy-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/05/meilleures-evaluations-2016/">
                    Lire l'article
                    <i class="material-icons">chevron_right</i>
                  </a>
@@ -183,7 +199,7 @@ Soyez tranquille : Allianz assure toutes les locations !
                 <span class="mdl-typography--font-light mdl-typography--subhead">L’année 2017 a certainement commencé sur les chapeaux de roues et vous commencez à songer à vos prochaines escapades en dehors de la ville. Bonne nouvelle, 2017 sera plus généreuse en week-ends prolongés que ce que n’a été l’année 2016 et plusieurs ponts se sont glissés dans nos calendriers...</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/02/calendrier-vacances-week-ends-prolonges-de-lannee-2017/">
+                 <a class="drivy-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://blog.drivy.com/2017/01/02/calendrier-vacances-week-ends-prolonges-de-lannee-2017/">
                    Lire l'article
                    <i class="material-icons">chevron_right</i>
                  </a>
@@ -192,7 +208,7 @@ Soyez tranquille : Allianz assure toutes les locations !
           </div>
         </div>
 
-        <footer class="android-footer mdl-mega-footer">
+        <footer class="drivy-footer mdl-mega-footer">
           <div class="mdl-mega-footer--top-section">
             <div class="mdl-mega-footer--right-section">
               <a class="mdl-typography--font-light" href="#top">
@@ -207,7 +223,7 @@ Soyez tranquille : Allianz assure toutes les locations !
           </div>
 
           <div class="mdl-mega-footer--bottom-section">
-            <a class="android-link android-link-menu mdl-typography--font-light" id="version-dropdown">
+            <a class="drivy-link drivy-link-menu mdl-typography--font-light" id="version-dropdown">
               What's next ?
               <i class="material-icons">arrow_drop_up</i>
             </a>
